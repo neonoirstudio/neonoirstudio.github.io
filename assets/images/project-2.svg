@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200" role="img" aria-label="Project photo 2 placeholder">
+  <rect width="1600" height="1200" fill="#E1DDD1"/>
+  <text x="50%" y="581" text-anchor="middle" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', Menlo, Consolas, monospace" font-size="54" font-weight="600" letter-spacing="6" fill="#333333">PROJECT PHOTO 2</text>
+  <line x1="770" y1="624" x2="830" y2="624" stroke="#333333" stroke-opacity="0.45" stroke-width="1.5"/>
+  <text x="50%" y="678" text-anchor="middle" font-family="'IBM Plex Mono', 'DejaVu Sans Mono', Menlo, Consolas, monospace" font-size="27" letter-spacing="2.2" fill="#333333">Replace with project-2.jpg</text>
+</svg>
