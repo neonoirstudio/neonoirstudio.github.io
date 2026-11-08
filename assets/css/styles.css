@@ -367,3 +367,15 @@ figure { margin: 0; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+
+
+/* Designer portraits on the About page */
+.portrait-section { max-width: 72rem; margin: 0 0 clamp(4rem, 8vw, 7rem); }
+.portrait-section > .project-title { margin-bottom: 1.5rem; }
+.portrait-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.portrait-gallery img { width: 100%; aspect-ratio: 2 / 3; object-fit: cover; object-position: center top; background: var(--fog-mist); border: 1px solid var(--rule-strong); }
+.portrait-gallery figcaption { padding-top: .75rem; }
+@media (max-width: 760px) {
+  .portrait-gallery { grid-template-columns: 1fr; gap: 1.5rem; }
+  .portrait-gallery img { aspect-ratio: 4 / 5; }
+}
