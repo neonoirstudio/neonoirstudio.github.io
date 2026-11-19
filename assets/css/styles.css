@@ -157,7 +157,18 @@ figure { margin: 0; }
 .project-row:nth-child(even) .project-strip { grid-template-columns: minmax(0, 3fr) minmax(0, 5fr); }
 .project-row:nth-child(even) .project-strip a:first-child { order: 2; }
 .project-strip.is-single { grid-template-columns: 1fr; height: auto; }
-.project-strip.is-single img { aspect-ratio: 3 / 2; object-fit: contain; background: var(--paper); }
+.project-strip.is-single a,
+.project-strip.is-single picture {
+  height: auto;
+  width: 100%;
+}
+.project-strip.is-single img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+  background: var(--paper);
+}
 .project-hero.is-sketch { height: auto; min-height: 0; max-height: none; }
 .project-hero.is-sketch img { height: auto; max-height: 80svh; object-fit: contain; background: var(--paper); }
 .project-hero picture, .more-next picture { display: block; width: 100%; height: 100%; }
