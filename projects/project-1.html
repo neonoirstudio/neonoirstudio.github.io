@@ -47,7 +47,6 @@
       <nav id="site-nav" class="site-nav" aria-label="Primary">
         <ul>
           <li><a href="../#projects" aria-current="page">Projects</a></li>
-          <li><a href="../about.html">About</a></li>
           <li><a href="../#contact">Contact</a></li>
         </ul>
       </nav>
@@ -56,8 +55,11 @@
 
   <main id="main">
     <!-- PROJECT 01: Leavitt Street House. Bracketed copy is placeholder. Photos: project-1.jpg, project-1-2.jpg … project-1-4.jpg (see README). -->
-    <div class="project-hero">
-      <img src="../assets/images/project-1.svg" alt="[Alt text: describe the main Leavitt Street House photo]" width="1600" height="1200" fetchpriority="high" decoding="async">
+    <div class="project-hero is-sketch">
+      <picture>
+        <source type="image/webp" srcset="../assets/images/project-1.webp">
+        <img src="../assets/images/project-1.jpg" alt="Pencil sketch of the Leavitt Street House" width="1741" height="903" fetchpriority="high" decoding="async">
+      </picture>
     </div>
 
     <section class="project-intro wrap" aria-labelledby="project-title">
@@ -108,7 +110,6 @@
             <p class="label">Studio</p>
             <ul>
               <li><a href="../#projects">Projects</a></li>
-              <li><a href="../about.html">About</a></li>
               <li><a href="../#contact">Contact</a></li>
             </ul>
           </div>

@@ -59,7 +59,7 @@ Browser favicons are necessarily smaller than the page-logo minimum.
 ## Content parity
 
 The branch started from `portraits-optimized` at `1b0c72c`.
-On 19 Nov 2026, the About page "Meet the designer" portrait gallery, its CSS, and all `Headshot_*` image files were removed at Maya's request.
+On 19 Nov 2026, the About page "Meet the designer" portrait gallery, its CSS, and all `Headshot_*` image files were removed at Maya's request. Later the same day, the About page itself and all About links were removed at Maya's request.
 The two projects were renamed to Leavitt Street House and Paulina Street Penthouse.
 Paulina Street Penthouse uses Maya's pencil sketch as its main photo, marked Coming soon · 2027.
 All other site copy and bracketed placeholders are retained. The footer's old lowercase live-text logo is replaced by Canva's uppercase artwork.

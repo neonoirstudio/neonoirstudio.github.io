@@ -13,13 +13,12 @@ Its colors are `#F6F4F0`, `#222222`, and `#000000`. Text links use underlined in
 The site self-hosts Open Sauce One and Fira Code. Cormorant Garamond is the free display fallback for Calgary.
 
 [CANVA-BRANDING.md](CANVA-BRANDING.md) records the font sources, licenses, logo measurements, and local-only scope.
-The site keeps the existing content and placeholders, with two projects. Designer portraits have been removed from the About page.
+The site keeps the existing content and placeholders, with two projects. The About page has been removed.
 
 ## Files
 
 ```
 index.html                  ← home page: hero, projects (2), contact
-about.html                  ← About page: the studio as a firm (not a personal bio)
 projects/project-1.html     ← Leavitt Street House (Beverly)
 projects/project-2.html     ← Paulina Street Penthouse (West Town; coming soon in 2027)
 assets/css/styles.css       ← colours, fonts, layout
@@ -29,12 +28,12 @@ CNAME                       ← custom domain for GitHub Pages (neo-noirstudio.c
 .nojekyll                   ← tells GitHub Pages to skip Jekyll processing
 ```
 
-Navigation has Projects, About, and Contact. Services remain one line on the About page.
+Navigation has Projects and Contact.
 
 ## Filling in the text
 
-Every piece of placeholder copy is in **[square brackets]**. To find them all, search `index.html`,
-`about.html` and the files in `projects/` for `[`. Replace each one, including the brackets.
+Every piece of placeholder copy is in **[square brackets]**. To find them all, search `index.html`
+and the files in `projects/` for `[`. Replace each one, including the brackets.
 
 **Home page (`index.html`)**
 - Meta description (appears twice: once for search engines, once for Open Graph)
@@ -42,13 +41,6 @@ Every piece of placeholder copy is in **[square brackets]**. To find them all, s
 - Contact intro
 - Instagram handle (in the Contact section **and** the footer)
 - Image alt text
-
-**About page (`about.html`)**: about the studio as a firm
-- Meta description (appears twice)
-- Studio statement (1–2 sentences on the studio's point of view)
-- About the studio (a short paragraph on what the firm does and how it works with clients)
-- Services (a short list or one sentence)
-- "Based in Chicago, IL" and "Established 2026" come from the logo artwork; delete either row if not wanted.
 
 **Each project page (`projects/project-N.html`)**
 - Meta description (in the `<head>`)
@@ -75,11 +67,13 @@ replaces them). To use real photos:
 
    | File | Used for | Shape | Recommended size |
    |---|---|---|---|
-   | `project-1.jpg`, `project-2.jpg` | Main photo of each project: home-page row (wide image), top of its project page, "Next project" block. **`project-1.jpg` (Leavitt Street House) is also the framed photo under the logo on the home page** (cropped to 16:9 on desktop, 4:3 on phones, so keep the subject near the middle). | 4:3 landscape | 2400 × 1800 px |
+   | `project-1.jpg`, `project-2.jpg` | Main photo of each project: home-page row (wide image), top of its project page, "Next project" block. **`project-1.jpg` (Leavitt Street House) is also the framed photo under the logo on the home page**, shown uncropped (`object-fit: contain`). | 4:3 landscape | 2400 × 1800 px |
    | `project-N-2.jpg` | Tall detail next to the main photo on the home page; left of the pair on the project page | 4:5 portrait | 1200 × 1500 px |
    | `project-N-3.jpg` | Right of the pair on the project page | 4:5 portrait | 1200 × 1500 px |
    | `project-N-4.jpg` | Full-width photo right after the project description | 3:2 landscape | 2400 × 1600 px |
    | `og-image.png` (optional replacement) | Social share preview | 1.91:1 | 1200 × 630 px |
+
+   `project-1.jpg` and `project-1.webp` are already in place: Maya's pencil sketch of the Leavitt Street House (native 1741 × 903). The home-page hero, home-page row, and project hero show that sketch alone, uncropped (`object-fit: contain`). Additional Leavitt Street House slots (`project-1-2` through `project-1-4`) are still placeholder SVGs until photos are added.
 
    `project-2.jpg` and `project-2.webp` are already in place: Maya's pencil sketch of the Paulina Street Penthouse building (native 1540 × 1021). The home-page row and project hero show that sketch alone, uncropped (`object-fit: contain`). Additional Paulina Street Penthouse slots (`project-2-2` through `project-2-4`) are still placeholder SVGs until photos are added.
 
