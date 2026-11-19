@@ -70,7 +70,7 @@ figure { margin: 0; }
 .project-title, .project-name { font-family: var(--display); font-weight: 400; text-transform: uppercase; letter-spacing: .045em; font-size: clamp(1.75rem, 2.6vw, 2.5rem); line-height: 1.2; }
 .subhead, .more-caption .display, .site-nav a { font-family: var(--mono); font-weight: 400; text-transform: uppercase; letter-spacing: .12em; font-size: .8125rem; line-height: 1.6; }
 .caption { font-family: var(--mono); font-weight: 400; font-size: .8125rem; line-height: 1.6; color: var(--ink); }
-.label, .brand-meta, .specs dt, .contact-row dt, .about-row dt, .footer-cols .label { font-family: var(--mono); font-weight: 400; font-size: .75rem; line-height: 1.6; text-transform: uppercase; letter-spacing: .06em; color: var(--ink); }
+.label, .brand-meta, .specs dt, .contact-row dt, .footer-cols .label { font-family: var(--mono); font-weight: 400; font-size: .75rem; line-height: 1.6; text-transform: uppercase; letter-spacing: .06em; color: var(--ink); }
 .text-link, .crumbs a { color: var(--ink); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
 .text-link:hover, .crumbs a:hover { color: var(--black); text-decoration-thickness: 2px; }
 
@@ -101,7 +101,7 @@ figure { margin: 0; }
 .brand-mark { width: auto; height: var(--mark-h); min-height: 36px; }
 .site-nav { grid-column: 1 / -1; grid-row: 1; }
 .site-nav ul { display: flex; gap: 2.25rem; }
-.site-nav li:last-child { margin-left: auto; }  /* Projects, About | logo | Contact */
+.site-nav li:last-child { margin-left: auto; }  /* Projects | logo | Contact */
 .site-nav a {
   display: inline-block; padding: .5rem 0; color: var(--ink);
   background: linear-gradient(currentColor, currentColor) no-repeat 0 calc(100% - .3rem) / 0 1px;
@@ -126,6 +126,7 @@ figure { margin: 0; }
 .hero-figure { max-width: 88rem; margin-inline: auto; }
 .frame { padding: 10px; border: 1px solid var(--rule-strong); }  /* fine frame around photos */
 .hero-figure img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: var(--paper); }
+.hero-figure.is-sketch img { aspect-ratio: auto; height: auto; object-fit: contain; }
 .hero-caption {
   display: flex; justify-content: space-between; align-items: baseline; gap: .5rem 1rem; flex-wrap: wrap;
   padding-top: 1rem;
@@ -169,7 +170,6 @@ figure { margin: 0; }
 .project-strip.is-single img {
   width: 100%;
   height: auto;
-  aspect-ratio: 3 / 2;
   object-fit: contain;
   background: var(--paper);
 }
@@ -183,19 +183,15 @@ figure { margin: 0; }
   .dim-hover:hover img, .dim-hover:focus-within img { opacity: .88; }
 }
 
-/* ---------- Ruled tables (contact, about, project specs) ---------- */
+/* ---------- Ruled tables (contact, project specs) ---------- */
 .contact-list { max-width: 48rem; margin: 0 0 3.5rem; }
 .contact-list dl { margin: 0; border-top: 1px solid var(--rule-strong); }
-.contact-row, .about-row {
+.contact-row {
   display: grid; grid-template-columns: 10rem 1fr; gap: 1rem; align-items: baseline;
   padding-block: 1.3rem; border-bottom: 1px solid var(--rule);
 }
-.contact-row dd, .about-row dd { margin: 0; font-size: clamp(1rem, 1.6vw, 1.125rem); overflow-wrap: anywhere; }
+.contact-row dd { margin: 0; font-size: clamp(1rem, 1.6vw, 1.125rem); overflow-wrap: anywhere; }
 
-/* ---------- About page ---------- */
-.about-lead { font-size: clamp(1.0625rem, 1.6vw, 1.25rem); line-height: 1.6; max-width: 40rem; }
-.about-list { max-width: 56rem; margin: 0 0 3rem; border-top: 1px solid var(--rule-strong); }
-.about-row dd { max-width: 40rem; }
 
 /* Double-rule button: ink field, paper label */
 .btn {
@@ -315,6 +311,7 @@ figure { margin: 0; }
 
   .hero-intro { padding-block: 1.25rem 2.5rem; }
   .hero-figure img { aspect-ratio: 4 / 3; }
+  .hero-figure.is-sketch img { aspect-ratio: auto; }
 
   .projects-head { flex-direction: column; gap: .5rem; }
   .project-row { grid-template-columns: 1fr; }
@@ -324,7 +321,7 @@ figure { margin: 0; }
   .project-strip a + a { width: 62%; justify-self: end; }
   .project-strip a + a img { aspect-ratio: 4 / 5; }
 
-  .contact-row, .about-row { grid-template-columns: 1fr; gap: .25rem; }
+  .contact-row { grid-template-columns: 1fr; gap: .25rem; }
   .btn { display: block; text-align: center; }
 
   .footer-cols { grid-template-columns: 1fr; gap: 1.75rem; }
