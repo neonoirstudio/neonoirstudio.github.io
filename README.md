@@ -6,96 +6,22 @@ Plain HTML/CSS with a little vanilla JS. No build step: GitHub Pages serves the 
 - Live URL (once published): https://neo-noirstudio.com (set by the `CNAME` file; the repo is also reachable at https://neonoirstudio.github.io)
 - Repo name: `neonoirstudio.github.io`, branch `main`, served from the root
 
-## Look and feel
+## Canva branding
 
-The site follows the **Neo-Noir Studio brand guidelines** (logo, color and typography pages): light and quiet,
-with Swiss Coffee paper, Noir type, the script N logo as artwork, and plenty of white space. Thin Fog Mist
-hairlines separate rows, and there are no gradients or glows. The only motion is a gentle fade-in on scroll, which is
-switched off for visitors who prefer reduced motion. The photographs supply the colour. The layout keeps the editorial
-structure: a three-part header, project rows, ruled tables and individual project pages. Text aligns left; only the
-logo is centred.
+The local `canva-branding` branch uses the actual Canva script N and Fira Code wordmark.
+Its colors are `#F6F4F0`, `#222222`, and `#000000`. Text links use underlined ink instead of Rouge.
+The site self-hosts Open Sauce One and Fira Code. Cormorant Garamond is the free display fallback for Calgary.
 
-## Brand tokens
-
-All of these are CSS custom properties at the top of `assets/css/styles.css` (`:root`).
-
-**Colour** (Benjamin Moore references. The paint codes are the source of truth, and these are the screen values.)
-
-| Token | Hex | Role | Share |
-|---|---|---|---|
-| `--noir` | `#333333` | Primary: logo, all type, dark fields (the footer) | ~20% |
-| `--swiss-coffee` | `#EEECE2` | Primary: page / paper background (BM OC-45) | ~50% |
-| `--fog-mist` | `#E1DDD1` | Greige: panels, photo placeholders, hairline rules (BM OC-31) | ~15% |
-| `--glacier-white` | `#ECEAE1` | Cooler white: alternate grounds (Contact) (BM OC-37) | ~7% |
-| `--whitall-brown` | `#786C5F` | Warm taupe: only for large type (24px+) because it is 4.3:1 on Swiss Coffee. Used for the big project numerals (BM HC-69) | ~5% |
-| `--dry-sage` | `#A29F86` | Accent, details only: the short rules above the hero tagline and on the project title rule (BM 2142-40) | ~3% |
-| `--rouge` | `#C8102E` | Links and interactive moments **only** (5.0:1 on Swiss Coffee) | links |
-
-Pairings: Noir on Swiss Coffee is 10.7:1, and Swiss Coffee on Noir is 10.7:1 (footer). On Noir (or Whitall Brown)
-grounds, links switch to underlined Swiss Coffee. Small captions and eyebrow labels use Noir at 80% opacity
-(`--noir-soft`, about 6:1) rather than Whitall Brown, so they stay WCAG AA.
-
-**Typography**: two families, both free from Google Fonts. There is no serif, and words are never set in a script typeface (the
-script N is drawn artwork).
-
-| Style | Spec | Used for |
-|---|---|---|
-| Display | Montserrat Light 300, 44/52, caps, +300 (0.3em) | section titles (Projects, About, Contact) |
-| Heading | Montserrat Light 300, 28/36, caps, +280 | project titles, project names |
-| Subhead | Montserrat Medium 500, 13/20, caps, +240 | navigation, next-project name |
-| Body | IBM Plex Mono Regular 400, 16/26, sentence case | all running text |
-| Caption | IBM Plex Mono 400, 13/20 | photo captions |
-| Link | IBM Plex Mono 400 in Rouge, 1px underline, 3px offset, hover Noir | text links |
-| Label | IBM Plex Mono SemiBold 600, 12/18, caps, +40 | CHICAGO / EST 2026, spec and contact table labels, footer headings, button |
-| Eyebrow | IBM Plex Mono 400, 12px caps | small section labels ("The studio", "Selected work") |
-
-Display and Heading scale down on small screens. The page loads only the weights in use (Montserrat 300/500 and
-Plex Mono 300/400/600; the Light 300 is only for the footer wordmark). If you need Montserrat 400 later, add it to the
-Google Fonts link in each page's `<head>`.
-
-**Logo** (`assets/images/`)
-
-The logo (updated Sep 30, hi-res file) is a flowing script **N**: long hairline swashes to the left and right, both main
-strokes looping at the bottom, and a fine diagonal hairline between them that tapers out from both ends and
-breaks midway (as in Maya's file), set above the NEO-NOIR STUDIO wordmark. The mark was
-traced to vectors from scratch from Maya's hi-res logo JPEG (1024 px wide artwork). The wordmark is set in Montserrat
-outlines, matched to the logo's letter size, weight and per-letter positions (the source measures as Montserrat Regular
-400, tracked about 0.56em). No font is needed to display any logo file.
-
-The footer uses Maya's **lowercase monospace wordmark**, "neo-noir studio", as live text (not an image): IBM Plex Mono
-Light 300, lowercase, letter-spacing .387em (measured on her file: letter pitch = 0.987 × font size), in Swiss Coffee on
-the Noir footer, 16–18px.
-
-| File | What it is | Where it's used |
-|---|---|---|
-| `logo-lockup.svg` | Primary lockup: script N + NEO-NOIR STUDIO wordmark, Noir (landscape, about 1.67 : 1) | home-page hero, social image |
-| `logo-lockup-light.svg` | Same lockup in Swiss Coffee, for Noir grounds | available; the footer now uses the lowercase wordmark |
-| `logo-monogram.svg` | Script N alone, Noir (wide, about 2.5 : 1) | header centre |
-| `logo-wordmark.svg` | Wordmark alone, Noir | available; not used on the site yet |
-| `favicon.svg`, `favicon.ico`, `apple-touch-icon.png` | The N's main strokes on Swiss Coffee (the long swashes are cropped so it reads at 16–32px) | browser tab / home screen |
-| `og-image.png` (+ `og-image.svg` source) | 1200 × 630 social-share preview: lockup, "Chicago · Est 2026" and tagline on Swiss Coffee | link previews |
-
-Rules, enforced in the CSS:
-- **Clear space:** keep a margin of *x* on every side, where **x = 2 × the cap height of the NEO-NOIR STUDIO
-  wordmark**. Measured on the artwork, *x* = 0.209 × the script N's height = 0.0809 × the lockup's width
-  (`--x-per-mono-h`, `--x-per-lockup-w`). The header mark and hero lockup are padded by *x*. The footer wordmark
-  keeps 2 × its own cap height (about 1.4em) clear through the footer's padding and grid gaps.
-- **Minimum sizes:** primary lockup 120px wide; wordmark 120px wide; script N **36px tall (about 90px wide)**. Below
-  that, the hairline swashes fade out on standard-resolution screens. On the site, the header mark is 40px tall
-  (36px on phones), the hero lockup is 240–352px wide.
-  The browser-tab favicon is necessarily smaller; it is an icon, not a logo placement.
-- To recolour a logo file, open it in a text editor and change its `fill`.
-
-**Brand copy** taken from the logo artwork and used as written: "Neo-Noir Studio", "Chicago", "Est 2026" and the
-tagline "Driven by quality. Chosen by those who know the difference." (under the hero lockup and in every footer).
+[CANVA-BRANDING.md](CANVA-BRANDING.md) records the font sources, licenses, logo measurements, and local-only scope.
+The site keeps the existing content and placeholders, with two projects. Designer portraits have been removed from the About page.
 
 ## Files
 
 ```
 index.html                  ← home page: hero, projects (2), contact
 about.html                  ← About page: the studio as a firm (not a personal bio)
-projects/project-1.html     ← Leavitt Street (Beverly)
-projects/project-2.html     ← Paulina (West Town)
+projects/project-1.html     ← Leavitt Street House (Beverly)
+projects/project-2.html     ← Paulina Street Penthouse (West Town; coming soon in 2027)
 assets/css/styles.css       ← colours, fonts, layout
 assets/js/main.js           ← mobile menu toggle + gentle scroll fade-in (the site works without it)
 assets/images/              ← logo files, photos (placeholders for now), favicon, social-share image
@@ -103,8 +29,7 @@ CNAME                       ← custom domain for GitHub Pages (neo-noirstudio.c
 .nojekyll                   ← tells GitHub Pages to skip Jekyll processing
 ```
 
-Navigation (header and footer): Projects, About, Contact. The site is deliberately simple: there is no
-photo of Maya or personal bio, and no separate services section (services are one line on the About page).
+Navigation has Projects, About, and Contact. Services remain one line on the About page.
 
 ## Filling in the text
 
@@ -127,12 +52,12 @@ Every piece of placeholder copy is in **[square brackets]**. To find them all, s
 
 **Each project page (`projects/project-N.html`)**
 - Meta description (in the `<head>`)
-- Specs: Year and Scope (Location and Type are filled in). Delete any row you don't want to show.
+- Specs: Year and Scope (Location and Type are filled in; Paulina Street Penthouse also has Year 2027 and Status). Delete any row you don't want to show.
 - Project description
 - Image alt text
 
-Confirmed by Maya: Leavitt Street is a 1920s Dutch Colonial in Beverly; Paulina is a midcentury condo in
-West Town. The type shows in the Type spec on each project page, under the project name on the home page,
+Confirmed by Maya: Leavitt Street House is a 1920s Dutch Colonial in Beverly; Paulina Street Penthouse is a midcentury condo in
+West Town, coming soon in 2027. The type shows in the Type spec on each project page, under the project name on the home page,
 and in the "Next project" block.
 Each name appears on its own page, in its row on the home page, and in the "Next project" block on the other project's page.
 
@@ -146,15 +71,17 @@ Right now the site uses light placeholder SVGs (Fog Mist panels with a Noir labe
 replaces them). To use real photos:
 
 1. Export each photo as a JPG with exactly these names and put them in `assets/images/`
-   (`N` is 1 for Leavitt Street, 2 for Paulina):
+   (`N` is 1 for Leavitt Street House, 2 for Paulina Street Penthouse):
 
    | File | Used for | Shape | Recommended size |
    |---|---|---|---|
-   | `project-1.jpg`, `project-2.jpg` | Main photo of each project: home-page row (wide image), top of its project page, "Next project" block. **`project-1.jpg` (Leavitt Street) is also the framed photo under the logo on the home page** (cropped to 16:9 on desktop, 4:3 on phones, so keep the subject near the middle). | 4:3 landscape | 2400 × 1800 px |
+   | `project-1.jpg`, `project-2.jpg` | Main photo of each project: home-page row (wide image), top of its project page, "Next project" block. **`project-1.jpg` (Leavitt Street House) is also the framed photo under the logo on the home page** (cropped to 16:9 on desktop, 4:3 on phones, so keep the subject near the middle). | 4:3 landscape | 2400 × 1800 px |
    | `project-N-2.jpg` | Tall detail next to the main photo on the home page; left of the pair on the project page | 4:5 portrait | 1200 × 1500 px |
    | `project-N-3.jpg` | Right of the pair on the project page | 4:5 portrait | 1200 × 1500 px |
    | `project-N-4.jpg` | Full-width photo right after the project description | 3:2 landscape | 2400 × 1600 px |
    | `og-image.png` (optional replacement) | Social share preview | 1.91:1 | 1200 × 630 px |
+
+   `project-2.jpg` and `project-2.webp` are already in place: Maya's pencil sketch of the Paulina Street Penthouse building (native 1540 × 1021). The home-page row and project hero show that sketch alone, uncropped (`object-fit: contain`). Additional Paulina Street Penthouse slots (`project-2-2` through `project-2-4`) are still placeholder SVGs until photos are added.
 
    Photos in other shapes are fine too. They're center-cropped to fit (`object-fit: cover`), but matching
    these shapes gives you control over the crop. Aim for **under ~400 KB each** (the large hero/full-width ones
