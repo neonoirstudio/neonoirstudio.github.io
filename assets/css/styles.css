@@ -111,8 +111,8 @@ figure { margin: 0; }
 .site-nav a[aria-current="page"] { background-size: calc(100% - .24em) 1px; }
 .nav-toggle { display: none; }
 
-/* ---------- Home: hero (primary lockup + brand card, then the lead photo) ---------- */
-.hero-intro { display: flex; justify-content: center; padding-block: clamp(1.5rem, 4vw, 3rem) clamp(3rem, 6vw, 4.5rem); }
+/* ---------- Home: hero (primary lockup + brand card) ---------- */
+.hero-intro { display: flex; justify-content: center; padding-block: clamp(1.5rem, 4vw, 3rem) 0; }
 .hero-lockup { --lock-w: clamp(15rem, 28vw, 22rem); display: grid; justify-items: center; }
 /* Primary lockup: min 120px wide; clear space x on every side */
 .hero-logo { padding: calc(var(--lock-w) * var(--x-per-lockup-w)); line-height: 0; }
@@ -123,14 +123,6 @@ figure { margin: 0; }
 }
 .brand-meta { display: flex; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
 .tagline { font-family: var(--mono); font-weight: 400; max-width: 23ch; font-size: .8125rem; line-height: 1.54; text-transform: uppercase; letter-spacing: .04em; word-spacing: .2em; }
-.hero-figure { max-width: 88rem; margin-inline: auto; }
-.frame { padding: 10px; border: 1px solid var(--rule-strong); }  /* fine frame around photos */
-.hero-figure img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: var(--paper); }
-.hero-figure.is-sketch img { aspect-ratio: auto; height: auto; object-fit: contain; }
-.hero-caption {
-  display: flex; justify-content: space-between; align-items: baseline; gap: .5rem 1rem; flex-wrap: wrap;
-  padding-top: 1rem;
-}
 
 /* ---------- Home: projects index (editorial rows) ---------- */
 .projects-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding-bottom: 1.5rem; }
@@ -147,7 +139,6 @@ figure { margin: 0; }
 .project-status { margin: 0 0 .55rem; }
 .project-place { margin-bottom: 1.25rem; }
 .project-place > span, .more-place > span { display: block; }  /* type, then location */
-.lc { text-transform: none; }  /* keeps the decade "s" lowercase inside caps labels (1920s) */
 .project-desc { margin-bottom: 1.25rem; max-width: 22rem; }
 .project-strip {
   display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 3fr); gap: 10px;
@@ -309,9 +300,7 @@ figure { margin: 0; }
   .js .site-nav ul { flex-direction: column; gap: 0; padding: .25rem 0 1rem; }
   .js .site-nav a { display: block; padding: 1rem 0; border-top: 1px solid var(--rule); background: none; }
 
-  .hero-intro { padding-block: 1.25rem 2.5rem; }
-  .hero-figure img { aspect-ratio: 4 / 3; }
-  .hero-figure.is-sketch img { aspect-ratio: auto; }
+  .hero-intro { padding-block: 1.25rem 0; }
 
   .projects-head { flex-direction: column; gap: .5rem; }
   .project-row { grid-template-columns: 1fr; }
