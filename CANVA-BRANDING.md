@@ -44,7 +44,7 @@ The local WOFF2 files are format conversions of those licensed sources. Open Sau
 
 ## Logo geometry
 
-The header uses the actual Canva N. The home hero uses the prepared stacked lockup. Every footer uses the original outlined uppercase wordmark.
+The header uses the actual Canva N. Every footer uses the original outlined uppercase wordmark.
 The light footer artwork uses verified paper `#F6F4F0`, not an unverified white surface.
 The favicons, social image, and placeholder graphics also use the new artwork, colors, and caption typeface.
 
@@ -52,8 +52,8 @@ The SVG trace follows the Canva raster silhouette and smooths minor edge irregul
 The original vector wordmark preserves Canva's glyph shapes and spacing.
 
 Clear space remains twice the native wordmark's cap height. Its source cap height is 41.84 units.
-The CSS rounds the padding up to 0.363 times the N height and 0.095 times the lockup or wordmark width.
-The N is 40px tall on desktop and 36px on phones. The lockup and wordmark stay at least 120px wide.
+The CSS rounds the padding up to 0.363 times the N height and 0.095 times the wordmark width.
+The N is 40px tall on desktop and 36px on phones. The footer wordmark stays at least 120px wide.
 Browser favicons are necessarily smaller than the page-logo minimum.
 
 ## Content parity

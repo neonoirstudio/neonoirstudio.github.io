@@ -18,7 +18,7 @@ The site keeps the existing content and placeholders, with two projects. The Abo
 ## Files
 
 ```
-index.html                  ← home page: hero, projects (2), contact
+index.html                  ← home page: projects (2), contact
 projects/project-1.html     ← Leavitt Street House (Beverly)
 projects/project-2.html     ← Paulina Street Penthouse (West Town; coming soon in 2027)
 assets/css/styles.css       ← colours, fonts, layout
@@ -73,7 +73,7 @@ replaces them). To use real photos:
    | `project-N-4.jpg` | Full-width photo right after the project description | 3:2 landscape | 2400 × 1600 px |
    | `og-image.png` (optional replacement) | Social share preview | 1.91:1 | 1200 × 630 px |
 
-   `project-1.jpg` and `project-1.webp` are already in place: Maya's pencil sketch of the Leavitt Street House (native 1741 × 903). The home-page hero, home-page row, and project hero show that sketch alone, uncropped (`object-fit: contain`). Additional Leavitt Street House slots (`project-1-2` through `project-1-4`) are still placeholder SVGs until photos are added.
+   `project-1.jpg` and `project-1.webp` are already in place: Maya's pencil sketch of the Leavitt Street House (native 1741 × 903). The home-page row and project hero show that sketch alone, uncropped (`object-fit: contain`). Additional Leavitt Street House slots (`project-1-2` through `project-1-4`) are still placeholder SVGs until photos are added.
 
    `project-2.jpg` and `project-2.webp` are already in place: Maya's pencil sketch of the Paulina Street Penthouse building (native 1540 × 1021). The home-page row and project hero show that sketch alone, uncropped (`object-fit: contain`). Additional Paulina Street Penthouse slots (`project-2-2` through `project-2-4`) are still placeholder SVGs until photos are added.
 
