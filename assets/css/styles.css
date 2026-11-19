@@ -156,7 +156,11 @@ figure { margin: 0; }
 .project-strip img { object-fit: cover; background: var(--paper); }
 .project-row:nth-child(even) .project-strip { grid-template-columns: minmax(0, 3fr) minmax(0, 5fr); }
 .project-row:nth-child(even) .project-strip a:first-child { order: 2; }
-.project-strip.is-single { grid-template-columns: 1fr; height: auto; }
+.project-strip.is-single,
+.project-row:nth-child(even) .project-strip.is-single {
+  grid-template-columns: 1fr;
+  height: auto;
+}
 .project-strip.is-single a,
 .project-strip.is-single picture {
   height: auto;
