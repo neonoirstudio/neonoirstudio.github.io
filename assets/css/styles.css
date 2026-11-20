@@ -110,22 +110,6 @@ figure { margin: 0; }
 .site-nav a[aria-current="page"] { background-size: calc(100% - .24em) 1px; }
 .nav-toggle { display: none; }
 
-/* ---------- Home hero statement ---------- */
-.home-hero {
-  padding-block: clamp(4.5rem, 14vw, 10rem) clamp(5rem, 16vw, 11rem);
-}
-.home-hero-statement {
-  margin: 0;
-  max-width: 13.5em;
-  font-family: var(--display);
-  font-weight: 400;
-  font-size: clamp(1.85rem, 1.2rem + 2.8vw, 3.5rem);
-  line-height: 1.22;
-  letter-spacing: .005em;
-  color: var(--ink);
-  text-wrap: balance;
-}
-
 /* ---------- Home: projects index (editorial rows) ---------- */
 .projects-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding-bottom: 1.5rem; }
 .projects-head .section-title { margin: 0; }
