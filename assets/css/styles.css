@@ -160,6 +160,12 @@ figure { margin: 0; }
   .dim-hover:hover img, .dim-hover:focus-within img { opacity: .88; }
 }
 
+/* ---------- Home: studio intro ---------- */
+#studio { border-top: 1px solid var(--rule); }
+.studio-intro { max-width: 60ch; }
+.studio-intro .label { margin-bottom: 1.25rem; }
+.studio-intro p { font-size: clamp(1rem, 1.4vw, 1.125rem); line-height: 1.65; }
+
 /* ---------- Ruled tables (contact, project specs) ---------- */
 .contact-list { max-width: 48rem; margin: 0 0 3.5rem; }
 .contact-list dl { margin: 0; border-top: 1px solid var(--rule-strong); }
